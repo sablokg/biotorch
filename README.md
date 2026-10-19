@@ -1,7 +1,6 @@
 # biotorch
 
-PyTorch toolkit for **biological sequences**, **biological networks** and **biological graphs**, with an
-automated training / dataset / hyper-parameter-search loop. Only `torch` and `numpy` are required.
+PyTorch automl for **biological sequences**, **biological networks** and **biological graphs**, with an automated training / dataset / hyper-parameter-search loop. Only `torch` and `numpy` are required.
 
 ```bash
 pip install .            # or: pip install -e ".[test]"
