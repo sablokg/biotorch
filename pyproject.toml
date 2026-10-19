@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "biotorch"
+dynamic = ["version"]
+description = "PyTorch toolkit for biological sequences, networks and graphs with an automated training loop"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["torch>=2.0", "numpy>=1.22"]
+keywords = ["bioinformatics", "pytorch", "graph neural networks", "genomics", "proteins", "networks"]
+
+[project.optional-dependencies]
+chem = ["rdkit"]
+test = ["pytest"]
+
+[project.scripts]
+biotorch = "biotorch.cli:main"
+
+[tool.setuptools.dynamic]
+version = { attr = "biotorch._version.__version__" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
